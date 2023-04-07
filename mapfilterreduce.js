@@ -42,3 +42,4 @@ console.log(arr.reduce((acc,curr)=>{
     acc = Math.max(acc,curr);
     return acc;
 },-Infinity));
+
