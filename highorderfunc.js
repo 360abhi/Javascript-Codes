@@ -44,3 +44,16 @@ const calculate = function(radius,logic){
 console.log(calculate(radiusarr,area));
 console.log(calculate(radiusarr,circum));
 console.log(calculate(radiusarr,diameter));
+
+//map function is also an higher order function
+console.log(radiusarr.map(area));
+
+Array.prototype.mycalculate = function(logic){
+    const output = []
+    for(let i=0;i<this.length;i++){
+        output.push(logic(this[i]))
+    }
+    return output;
+}
+
+console.log(radiusarr.mycalculate(area))
