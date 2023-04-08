@@ -21,10 +21,36 @@ const res =calculate(3,4,(m,n)=>{
 
 console.log(res)
 
-//set timeout function
-// setTimeout(function,milliseconds);
+// set timeout function
+//setTimeout(function,milliseconds);
 console.log("hello");
 setTimeout(() => {
     console.log("Im back");
 }, 3000);
 console.log("Lazt line");
+
+function getCheese(){
+    setTimeout(() => {
+        const cheese ="My cheesettt";
+        console.log("Here is my cheese"+cheese);
+        return cheese;
+    }, 3000);
+}
+
+// console.log(getCheese());
+//here the return cheese returns undefined 
+//console.log inside prints after 3 seconds
+// so we use callback funtion inside it which will bring use cheese when the time is over 
+//here the return statement does not make any sense
+
+function getCheesetwo(callback){
+    setTimeout(() => {
+        const cheese = "My Abhicheese"
+        console.log("Here is My abhicheese");
+        callback(cheese);
+    }, 2000);
+}
+
+getCheesetwo((cheese)=>{
+    console.log(cheese);
+});
