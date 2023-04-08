@@ -20,3 +20,11 @@ const res =calculate(3,4,(m,n)=>{
 })
 
 console.log(res)
+
+//set timeout function
+// setTimeout(function,milliseconds);
+console.log("hello");
+setTimeout(() => {
+    console.log("Im back");
+}, 3000);
+console.log("Lazt line");
