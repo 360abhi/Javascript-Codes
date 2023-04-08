@@ -23,19 +23,19 @@ console.log(res)
 
 // set timeout function
 //setTimeout(function,milliseconds);
-console.log("hello");
-setTimeout(() => {
-    console.log("Im back");
-}, 3000);
-console.log("Lazt line");
+// console.log("hello");
+// setTimeout(() => {
+//     console.log("Im back");
+// }, 3000);
+// console.log("Lazt line");
 
-function getCheese(){
-    setTimeout(() => {
-        const cheese ="My cheesettt";
-        console.log("Here is my cheese"+cheese);
-        return cheese;
-    }, 3000);
-}
+// function getCheese(){
+//     setTimeout(() => {
+//         const cheese ="My cheesettt";
+//         console.log("Here is my cheese"+cheese);
+//         return cheese;
+//     }, 3000);
+// }
 
 // console.log(getCheese());
 //here the return cheese returns undefined 
@@ -51,6 +51,26 @@ function getCheesetwo(callback){
     }, 2000);
 }
 
+function getDough(cheese,callback){
+    setTimeout(() => {
+        const dough = cheese + " dough";
+        console.log("got the "+ dough);
+        callback(dough);
+    }, 2000);
+}
+
+function bakePizza(dough,callback){
+    setTimeout(() => {
+        const pizza = dough + " pizza";
+        console.log("got the "+pizza);
+        callback(pizza);
+    }, 2000);
+}
+
 getCheesetwo((cheese)=>{
-    console.log(cheese);
-});
+    getDough(cheese,(dough)=>{
+        bakePizza(dough,(pizza)=>{
+            console.log(pizza);
+        })
+    })
+})
