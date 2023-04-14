@@ -19,8 +19,8 @@ const personTwo = {
 }
 
 // works based on key not on position unlike array
-const {name, age} = personOne
-console.log(`${name} ${age}`)
+// const {name, age} = personOne
+// console.log(`${name} ${age}`)
 
 //to set the name to first name, maps the name property to firstname variable
 const {name: firstname} = personTwo
@@ -33,6 +33,17 @@ console.log(food)
 //spread operator
 // const {name,age, ...rest} = personOne
 // console.log(rest)
+
+const sounds = {
+    faz:"soundone",
+    baz:"soundtwo",
+    saz:"soundthree"
+}
+//rest in spread operator will give an new objexct
+
+const {faz, ...rest} = sounds;
+console.log(rest.baz)
+
 
 //nested objects destr
 const {name:myname, address: {city}} = personTwo
