@@ -43,3 +43,12 @@ console.log(arr.reduce((acc,curr)=>{
     return acc;
 },-Infinity));
 
+//
+
+const myArray = [3,2,5,8,2];
+const mySum = myArray.reduce((acc,curr)=>{
+    acc += curr;
+    return acc;
+},0);
+
+console.log(mySum);
