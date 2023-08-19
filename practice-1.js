@@ -17,12 +17,12 @@ const timerId = setTimeout(() => {
 
 clearTimeout(timerId);
 
-//set Interval
-// setInterval(() => {
-//     console.log("Will print after every 2 seconds");
-// }, 2000);
+// set Interval
+setInterval(() => {
+    console.log("Will print after every 2 seconds");
+}, 2000);
 
-//print hello world only 5 times and after that done
+//print going right only 5 times and after that done
 counter = 0;
 const intervalID = setInterval(() => {
     counter++;
@@ -30,7 +30,7 @@ const intervalID = setInterval(() => {
         console.log("done exiting now");
         clearInterval(intervalID);
     } else {
-        console.log("hello world")
+        console.log("Going right")
     }
 
 }, 2000);
